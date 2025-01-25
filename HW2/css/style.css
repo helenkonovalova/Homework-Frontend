@@ -1,0 +1,325 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    padding: 50px 150px;
+    background-color: #404149;
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar>li>a{
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 42px;
+    display: flex; /* Добавили,чтобы выровнять иконку по центру относительно текста */
+    align-items: center; /* Добавили,чтобы выровнять иконку по центру относительно текста */
+}
+
+.navbar>li>a>i{
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.navbar>li>a:hover{
+    color: #19191b;
+}
+
+header{
+    background-image: url("../css/Media/Rectangle.png");
+    background-repeat: no-repeat;
+    background-size: cover; /*равномерное увеличивает картинку и лишнее отрезает*/
+    /* background-position: top; показывает верх картинки*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1110px;
+}
+
+header .title_block{
+    /* padding-top: 192px; */
+    padding: 192px 188px 20px 188px;
+    text-align: center;
+    color: white;
+}
+
+header .title_block h1{
+    font-family: Oswald;
+    font-size: 64px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 35px;
+    line-height: 1;
+}
+header .title_block h1::first-line{
+line-height: 95px;
+}
+
+header .title_block p{
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header .info_block{
+    background-color: #fff;
+    padding: 57px 130px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-family: Oswald;
+}
+header .info_block>div>p:first-child{
+    font-size: 72px;
+    font-weight: 500;
+    color: #F7654A;
+    margin-bottom: 25px;
+}
+header .info_block>div>p:nth-child(2){
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+}
+header .info_block>div>p:last-child{
+    font-size: 18px;
+    font-weight: 500;
+    color: #999999;
+
+}
+
+/* mobile :first
+desktop first */
+
+/*
+@media [тип устройства] and ([характеристики])
+[тип устройства] = по умолчанию screen
+print вид приложения во время принта*/
+
+
+@media screen and (max-width: 1200px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }  
+}
+/* 2 способ
+.navbar{
+    @media screen and (max-width:1200px){
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+} */
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+
+}
+
+.about .about_block h2{
+    font-family: Oswald;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    color: #000;
+    margin-bottom: 66px;
+}
+
+.about .services{
+    gap: 30px; /*добавляет расстояние между элементами
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.about .services>div {
+    /* flex: 30%; */
+    background-color: #F7F7F7;
+    text-align: center;
+    padding: 60px 90px;
+}
+.about .services>div p{
+    font-size: 21px;
+    font-weight: 500;
+    font-family: Oswald;
+}
+
+.about .services>div i{
+    font-size: 48px;
+    color: #F7654A;
+    margin-bottom: 30px;
+}
+.add_block{
+   background-color: #F7654A;
+   display: flex;
+   justify-content: center;
+   padding: 30px 0 45px 0;
+}
+
+.req_form{
+    font-family: Oswald;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.req_form div:first-child h2{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.req_form div:first-child p{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.req_form div:last-child button{
+    font-family: Oswald;
+    padding: 15px 45px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 73px;
+    margin-bottom: 59px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.services>div:hover i{
+    display: none;
+}
+
+.our_projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.project_block h2{
+    text-align: center;
+    font-family: Oswald;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 53.35px;
+    color: #404149;
+    padding-bottom: 60px;
+}
+
+.project_block .projects{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 200px;
+    gap: 30px;
+}
+
+.project_block .projects>div h3{
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 35.57px;
+    text-align: left;
+    color: #404149;
+    margin: 15px 0 20px 0;
+}
+
+.project_block .projects>div p{
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 21.79px;
+    text-align: left;
+}
+
+.project_block .projects .block{
+    background-color: #F7654A;
+    width: 55px;
+    height: 6px;
+    margin-top: 45px;
+}
+
+.our_contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 112px 60px;
+}
+
+.contacts_block h2{
+    font-family: Oswald;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 53.35px;
+    text-align: center;
+    color: #000;
+}
+
+.contacts_block .contacts{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    gap: 30px;
+    text-align: center;
+}
+
+.contacts_block .contacts>div h3{
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 35.57px;
+    color: #999999;
+    padding: 36px 25px;
+}
+
+.contacts_block .contacts>div p{
+font-family: Oswald;
+font-size: 24px;
+font-weight: 500;
+line-height: 35.57px;
+color: #000;
+}
+
+.contacts_block .contacts>div:last-child p{
+    color: #F7654A
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #404149;
+    padding: 30px 30px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p{
+    color: #fff;
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 21.79px;
+}
+
